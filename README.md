@@ -6,23 +6,25 @@ Group 30's COSC 4337 project combines audio-spoof detection with transcript-base
 
 Install [uv](https://docs.astral.sh/uv/) and Python 3.12. From the repository root, create the environment outside any cloud-synced folder, then install the exact versions in `uv.lock`.
 
-Linux/macOS/WSL:
+Linux and WSL:
 
 ```bash
 mkdir -p "$HOME/.venvs"
 export UV_PROJECT_ENVIRONMENT="$HOME/.venvs/data-science-2-group-project"
+export HF_HOME="$HOME/.cache/huggingface"
 uv sync --locked
 ```
 
-Windows PowerShell:
+Windows x64 PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.venvs" | Out-Null
 $env:UV_PROJECT_ENVIRONMENT = "$HOME\.venvs\data-science-2-group-project"
+$env:HF_HOME = "$env:LOCALAPPDATA\huggingface"
 uv sync --locked
 ```
 
-Set `UV_PROJECT_ENVIRONMENT` again in each new terminal session. The project-local `pyproject.toml` and `uv.lock` define the same dependencies for every teammate; each machine keeps its environment and downloaded model cache locally.
+Set `UV_PROJECT_ENVIRONMENT` and `HF_HOME` again in each new terminal session. The project-local `pyproject.toml` and `uv.lock` define the same dependencies for every teammate; each machine keeps its environment and downloaded model cache locally.
 
 Copy `.env.example` to `.env` in the repository root and set paths to datasets available on that machine. `.env` and dataset contents are ignored by Git. Do not commit local paths, dataset files, credentials, or model caches.
 
