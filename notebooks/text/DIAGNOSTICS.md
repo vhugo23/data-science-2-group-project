@@ -78,8 +78,9 @@ Each confusion matrix remains `[[96, 0], [0, 96]]`; no validation prediction
 changed. Mean absolute score changes were 0.000717 for strict removals and
 0.005317 for broad removals. All removed examples were benign wrong-number
 dialogues; scam training examples remained unchanged. Each type retained perfect
-validation accuracy. Scores, per-type tables, removed IDs, figures, and both
-sensitivity classifiers are saved under `outputs/text/diagnostics/`.
+validation accuracy. Scores, per-type tables, removed IDs, and figures are saved
+under `outputs/text/diagnostics/`. Nonselected sensitivity checkpoints are
+regenerable and excluded from the shared outputs.
 
 These specific overlaps do not explain the perfect validation result. This does
 not demonstrate that all paraphrase/template overlap has been removed, especially

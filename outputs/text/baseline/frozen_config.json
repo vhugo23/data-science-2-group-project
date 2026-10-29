@@ -1,0 +1,54 @@
+{
+  "model": "tfidf_logreg",
+  "seed": 42,
+  "ngram_range": [
+    1,
+    1
+  ],
+  "C": 0.1,
+  "threshold": 0.5,
+  "threshold_rule": "score >= threshold",
+  "selection": "validation F1 at 0.5, ties simplest ngrams then smallest C; threshold then maximizes validation F1 with ties closest to 0.5",
+  "fit_n": 1086,
+  "validation_at_0_5": {
+    "n": 192,
+    "scam_support": 96,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        96,
+        0
+      ],
+      [
+        0,
+        96
+      ]
+    ]
+  },
+  "validation": {
+    "n": 192,
+    "scam_support": 96,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        96,
+        0
+      ],
+      [
+        0,
+        96
+      ]
+    ]
+  },
+  "test_evaluated": false,
+  "dataset_revision": "321b961b5ae353e19ed479b960658dcd223d5e06",
+  "saved_model_sha256": "8099a48debb8ea4859910671f46b0913c9bdbe116712b714606a202a70fae32a"
+}

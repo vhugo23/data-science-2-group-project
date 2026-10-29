@@ -1,0 +1,33 @@
+{
+  "selection_data": "Original fixed validation split only",
+  "no_challenge_or_test_tuning": true,
+  "tfidf_model_sha256": "8099a48debb8ea4859910671f46b0913c9bdbe116712b714606a202a70fae32a",
+  "tfidf_config_sha256": "9b7deac53f8dcaa8b670b002803056f238de98b2e1d33fdf8a1a205df80131b5",
+  "minilm_classifier_sha256": "6c199dcae7732d7a8692b6a3c0381fa032d668bb69a71c64556404d4ae90d528",
+  "minilm_config_sha256": "b3180b886844c0a23751a3e129d4dfb648dc44824b59ebcd00a8d443d90e2c5f",
+  "minilm_encoder_fingerprint": "45a3f1a3de9850015587100bbeb583128c8f61e91987e5fad4252142bbb1fd47",
+  "embedding_recipe": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "max_sequence_tokens": 256,
+    "chunking": "nonoverlapping slices of original content token IDs; reserve tokenizer special tokens",
+    "chunk_pooling": "attention-mask mean of final hidden states, then L2 normalization",
+    "dialogue_pooling": "equal mean of chunk vectors, then L2 normalization",
+    "dtype": "float32",
+    "recipe_version": 1
+  },
+  "encoder_files_sha256": {
+    "config.json": "690af9cc80966511549996e93b5d1ee6811011f53208da7c697310ef92795b43",
+    "embedding_recipe.json": "c187b477ab42645c47606817c1100df5c6c6b9ec7f0441bfb1ee32981b77f8ea",
+    "model.safetensors": "1377e9af0ca0b016a9f2aa584d6fc71ab3ea6804fae21ef9fb1416e2944057ac",
+    "special_tokens_map.json": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+    "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "tokenizer_config.json": "ccb4eb21a03e1442ee5c3f85431b9c307960a04579942537d74778dc8080a48c",
+    "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+  },
+  "minilm_source_sha256": "2eca27c85c556dc1cdd9f1dff8fbe3f08f1bb26060556bdc0140a390af05fd9c",
+  "tfidf_threshold": 0.5,
+  "minilm_threshold": 0.5,
+  "challenge_state": "Awaiting independent review and locked final labels",
+  "official_test_evaluated": false
+}

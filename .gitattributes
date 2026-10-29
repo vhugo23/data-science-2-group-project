@@ -5,3 +5,6 @@
 # Preserve the exact bytes used by split/review lock checksums.
 /notebooks/text/split_manifest.csv -text
 /notebooks/text/challenge_v1/** -text
+
+# Saved-model, config, and score checksums use exact bytes.
+/outputs/text/** -text

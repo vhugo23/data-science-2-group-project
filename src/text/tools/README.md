@@ -96,11 +96,14 @@ Official sources: [CLI](https://github.com/googlecolab/google-colab-cli),
 - `runtime.json`, `notebook_execution_counts.json`: execution provenance.
 - `split_manifest.csv`, `oof_folds.csv`: stable identities, inclusion flags, folds.
 - `fusion_scores_train_validation.csv`: 1,086 OOF training and 192 validation scores.
-- Audit tables, matching texts, validation predictions/errors, and PNG figures.
+- Audit tables, validation predictions/errors, and PNG figures. Full copied
+  dialogue text from similarity review is excluded from shared outputs.
 
-Data, models, and generated score files stay under ignored `data/` and `outputs/`.
-Fixed split IDs, aggregate audit results, and manual similarity review are retained
-under `notebooks/text/`. Do not change the fixed manifest silently.
+Raw data stays under ignored `data/`. Retained models, score files, and evidence
+under `outputs/text/` are shared through GitHub. Other output tracks, transfers,
+scratch replay results, and nonselected diagnostic checkpoints remain ignored.
+Fixed split IDs, aggregate audit results, and manual similarity review are also
+retained under `notebooks/text/`. Do not change the fixed manifest silently.
 
 ```python
 from src.text.baseline import score_transcripts
