@@ -1,9 +1,0 @@
-# Shared coursework dependencies live in ../../../../pyproject.toml.
-# Install project-specific dataset utilities into that shared uv environment:
-python-dotenv
-librosa
-soundfile
-datasets
-transformers
-huggingface_hub
-evaluate

@@ -1,0 +1,26 @@
+[project]
+name = "data-science-2-group-project"
+version = "0.1.0"
+description = "COSC 4337 project on voice-cloned scam call triage"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "datasets",
+    "evaluate",
+    "huggingface-hub",
+    "ipykernel",
+    "jupyterlab",
+    "librosa",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "python-dotenv",
+    "scikit-learn",
+    "sentence-transformers",
+    "soundfile",
+    "torch==2.7.1",
+    "torchaudio==2.7.1",
+    "transformers",
+]
+
+[tool.uv]
+package = false
