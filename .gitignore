@@ -4,3 +4,7 @@ data/
 outputs/
 __pycache__/
 .ipynb_checkpoints/
+
+# Keep challenge answer keys local until independent blind review is complete.
+src/text/challenge_content.py
+notebooks/text/challenge_v1/author_only/

@@ -1,0 +1,12 @@
+{
+  "Justin": {
+    "reviewer_name": "",
+    "independent_review_completed": false,
+    "did_not_consult_author_key_or_other_reviewer_or_model_scores": false
+  },
+  "Hugo": {
+    "reviewer_name": "",
+    "independent_review_completed": false,
+    "did_not_consult_author_key_or_other_reviewer_or_model_scores": false
+  }
+}

@@ -1,0 +1,7 @@
+# Stable source and notebook line endings across Windows and Colab.
+/src/text/** text eol=lf
+/notebooks/text/** text eol=lf
+
+# Preserve the exact bytes used by split/review lock checksums.
+/notebooks/text/split_manifest.csv -text
+/notebooks/text/challenge_v1/** -text
