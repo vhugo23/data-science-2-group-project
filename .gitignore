@@ -1,7 +1,7 @@
 .env
 .venv/
 data/
-outputs/
+# outputs/
 __pycache__/
 .ipynb_checkpoints/
 

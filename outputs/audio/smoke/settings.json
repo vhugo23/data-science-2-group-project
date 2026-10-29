@@ -1,0 +1,24 @@
+{
+  "mode": "smoke",
+  "seed": 42,
+  "sample_rate": 16000,
+  "window_seconds": 4,
+  "trim_top_db": 30,
+  "crop": "start",
+  "padding": "right_zero",
+  "normalization": "peak",
+  "n_mfcc": 20,
+  "n_fft": 400,
+  "hop_length": 160,
+  "n_mels": 40,
+  "encoder": "facebook/wav2vec2-base",
+  "encoder_revision": null,
+  "pooling": "time_mean",
+  "threshold_selection": "maximum_validation_f1",
+  "thresholds": {
+    "mfcc": 0.6561801433563232,
+    "wav2vec2": 0.1296376734972
+  },
+  "train_scores": "stratified_out_of_fold",
+  "external_evaluated": false
+}
