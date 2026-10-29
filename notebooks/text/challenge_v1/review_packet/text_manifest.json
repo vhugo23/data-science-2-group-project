@@ -1,0 +1,197 @@
+{
+  "text_set_sha256": "0a51f26edc5f48ad08d3082f819a5fd8fdce5d2c47e0f2d2ac4863d8f4a785cd",
+  "dialogues": [
+    {
+      "dialogue_id": "challenge-2ddb3bc603e05825",
+      "text_sha256": "2ddb3bc603e058255bc84fe4becd4e0599cdab54b1a752e2e8dc21e7be864011"
+    },
+    {
+      "dialogue_id": "challenge-d230e8af428aa67d",
+      "text_sha256": "d230e8af428aa67d496db422290c5fb4992406665bceaad8b306ae6708779305"
+    },
+    {
+      "dialogue_id": "challenge-d15e43557b5a095c",
+      "text_sha256": "d15e43557b5a095c8e434fdf2d09e67062c8537d7e498849308bc39ebc2a5800"
+    },
+    {
+      "dialogue_id": "challenge-907215ada1337446",
+      "text_sha256": "907215ada13374460ce6072692959920852f92b26d0d48ea63c4653d5b0bd441"
+    },
+    {
+      "dialogue_id": "challenge-168066cdb98883d7",
+      "text_sha256": "168066cdb98883d7eb0b514a73f76ce2548c201281da36efe7fbfdfad585b10b"
+    },
+    {
+      "dialogue_id": "challenge-e21310228a168fdb",
+      "text_sha256": "e21310228a168fdb9e77daa55fa36d4bd4d758d7b6934aa9a1b95ff882ae5ce6"
+    },
+    {
+      "dialogue_id": "challenge-66534c82119bf289",
+      "text_sha256": "66534c82119bf2891c9e4ba823d485eb8f352c5a5a2c82bbf0a07a152643d810"
+    },
+    {
+      "dialogue_id": "challenge-6a81f4f7f11f98cc",
+      "text_sha256": "6a81f4f7f11f98cc763bbdbadcef0d6388dbc8137f70aa177426d9a64d3c67d3"
+    },
+    {
+      "dialogue_id": "challenge-87acee514804ef7f",
+      "text_sha256": "87acee514804ef7f97aac579ee15afe4bafe230752058359fcc3de454b716001"
+    },
+    {
+      "dialogue_id": "challenge-61686f86e46f0108",
+      "text_sha256": "61686f86e46f0108cae49cf97647d03d084bcde27edf9aabb2e0ba617558e1d4"
+    },
+    {
+      "dialogue_id": "challenge-51d1fe2ac6a4c855",
+      "text_sha256": "51d1fe2ac6a4c855241b749e75ceb2634d5322cb6bd16c99e313766c19395bf3"
+    },
+    {
+      "dialogue_id": "challenge-b2c4735050b2fe55",
+      "text_sha256": "b2c4735050b2fe55e2b1886e34878f638db5df904a61412da04a36d06cc8ad45"
+    },
+    {
+      "dialogue_id": "challenge-aa39ec9245407af7",
+      "text_sha256": "aa39ec9245407af7b9a5668c730e7aa83d1d8af9183ba22f8b708ca8441056a6"
+    },
+    {
+      "dialogue_id": "challenge-17b58d0db7bedeb3",
+      "text_sha256": "17b58d0db7bedeb3f08baf144c5278369f57567c5b4698d5c9ba6ca940908888"
+    },
+    {
+      "dialogue_id": "challenge-6f1482ef936b6fec",
+      "text_sha256": "6f1482ef936b6fec733a833c189d68aabdc166b3be1af5241d9960e29a844662"
+    },
+    {
+      "dialogue_id": "challenge-e3186d0ae1b84523",
+      "text_sha256": "e3186d0ae1b845239e5072dabe5f098acdb931c00ac96b280358ec9a9f9b5f75"
+    },
+    {
+      "dialogue_id": "challenge-d2aa5dbf00396222",
+      "text_sha256": "d2aa5dbf00396222bf57f08150e9e2efcccc42ae939f341c9254dbc5834c646e"
+    },
+    {
+      "dialogue_id": "challenge-b08f3cd54e655b59",
+      "text_sha256": "b08f3cd54e655b595e35a5e6636d52adaba69adb5f15d46f8143886050796c24"
+    },
+    {
+      "dialogue_id": "challenge-6ca0d58ed716015b",
+      "text_sha256": "6ca0d58ed716015bc2ae3ba8f8487ea6d8d3989feb8b06723507606a9abf2699"
+    },
+    {
+      "dialogue_id": "challenge-6605d43c720eec4b",
+      "text_sha256": "6605d43c720eec4bd1b4800a5ea8e18a554ed5e5714ce48ea2a7446e161979d1"
+    },
+    {
+      "dialogue_id": "challenge-a1ede3c11c5b9ca9",
+      "text_sha256": "a1ede3c11c5b9ca9f21e65a11b78e4202efe615cbf5bdf13e68a41084a7f78e2"
+    },
+    {
+      "dialogue_id": "challenge-a6b439b01a9b379c",
+      "text_sha256": "a6b439b01a9b379cc1f82f7293890a902e09eb32936f0894c99ef6721648cc98"
+    },
+    {
+      "dialogue_id": "challenge-0225a679ad7716ef",
+      "text_sha256": "0225a679ad7716efe76e8a5c604d28c2a7f60a9a2860b47fb5d11d8beee25b7f"
+    },
+    {
+      "dialogue_id": "challenge-9546eb3935c3a868",
+      "text_sha256": "9546eb3935c3a868f54de320e278f827367b4794631ccfc59e62fcf833793cf5"
+    },
+    {
+      "dialogue_id": "challenge-b392b81975e70140",
+      "text_sha256": "b392b81975e7014010d3c435eb22325afee469c471941c465bc1c3835cdca0ab"
+    },
+    {
+      "dialogue_id": "challenge-7adfdb660af1b3a2",
+      "text_sha256": "7adfdb660af1b3a26c698f6c1bebba5889af62f5a08b4fba7453b9dfea1640f5"
+    },
+    {
+      "dialogue_id": "challenge-b8dcc09bb2edeb70",
+      "text_sha256": "b8dcc09bb2edeb703804a9e8c3197b97877c0ec2113ed5c269823ea23762b076"
+    },
+    {
+      "dialogue_id": "challenge-bada93f5a5e91cf0",
+      "text_sha256": "bada93f5a5e91cf01d79d627399aa9a356a86a013dae08dd8aabf07600a6a372"
+    },
+    {
+      "dialogue_id": "challenge-549893c08f82cd35",
+      "text_sha256": "549893c08f82cd35e9a65ca23ff75fd8ea4d3d356df46eab2f13ea66ad24cf43"
+    },
+    {
+      "dialogue_id": "challenge-7278378fe3dd8b0a",
+      "text_sha256": "7278378fe3dd8b0af78876367459d72f0b1cd4cf9f6b76316eac52efa335f387"
+    },
+    {
+      "dialogue_id": "challenge-f5dfe7b72c21a0c5",
+      "text_sha256": "f5dfe7b72c21a0c5a98469fc8ecd0a55a06a9cba9f01ae7bc3c0bb928a327557"
+    },
+    {
+      "dialogue_id": "challenge-d50bba0ab69a4637",
+      "text_sha256": "d50bba0ab69a4637b3d1a87f208eb1c4e7da2f27299e8e3ec7861ee2d92ddc82"
+    },
+    {
+      "dialogue_id": "challenge-b5c55f45395517bb",
+      "text_sha256": "b5c55f45395517bbccf7da24e0c74e789399ec5664adc921d16e2b0febe6fce8"
+    },
+    {
+      "dialogue_id": "challenge-1aa158f49b4baa76",
+      "text_sha256": "1aa158f49b4baa76625d764ba04734ee38d06cb655d0ef51b3ead9ba9c6a1199"
+    },
+    {
+      "dialogue_id": "challenge-921e755a80a051c0",
+      "text_sha256": "921e755a80a051c0ff84fecb8fa4ed1acbd934ac0249f14edc8234bcbc3a33ef"
+    },
+    {
+      "dialogue_id": "challenge-8d97fe7e32c54486",
+      "text_sha256": "8d97fe7e32c544863f8bf294e75a521b7ae49bbb837d113219e6463130f7f989"
+    },
+    {
+      "dialogue_id": "challenge-192cee8882ee76f4",
+      "text_sha256": "192cee8882ee76f4a35426bd260415591ca49fce39df2e5f877f6234f69efb40"
+    },
+    {
+      "dialogue_id": "challenge-81c467699b142dfb",
+      "text_sha256": "81c467699b142dfbf259b25e8c22d08db860da7e0631c7dc482a55b6eb08c13f"
+    },
+    {
+      "dialogue_id": "challenge-93149b73df078c32",
+      "text_sha256": "93149b73df078c32862a95569331af0779df70195257147a37de8564d33be548"
+    },
+    {
+      "dialogue_id": "challenge-eac326dd1f71f0f3",
+      "text_sha256": "eac326dd1f71f0f31a2a9d5ca0daa4a048a66ac4de9d7ebf5eaefdb3b00fee5f"
+    },
+    {
+      "dialogue_id": "challenge-93ecff153cf14d4f",
+      "text_sha256": "93ecff153cf14d4fbfee8ea7acba62253bbb4784a68d9453cb139ae50f5efdca"
+    },
+    {
+      "dialogue_id": "challenge-1c8e63835911e689",
+      "text_sha256": "1c8e63835911e6891920a6670c7df6fe68a1316b976bc91f98b1f5494076d0dc"
+    },
+    {
+      "dialogue_id": "challenge-dc8611cd99b46eb9",
+      "text_sha256": "dc8611cd99b46eb9de20e6078b812cc8207f3ff3a287ec9f0c98c3e25af58b56"
+    },
+    {
+      "dialogue_id": "challenge-936760d605ab627b",
+      "text_sha256": "936760d605ab627ba7ab935f994d71f3b2c4fd5cca4ba4985d29e55d6a8c860a"
+    },
+    {
+      "dialogue_id": "challenge-54fcccc061c6a763",
+      "text_sha256": "54fcccc061c6a7639ee66702c7a29cd69d277329b0be9d7260ce23cb92427913"
+    },
+    {
+      "dialogue_id": "challenge-6f66c7ee6e74d32b",
+      "text_sha256": "6f66c7ee6e74d32ba8277b8cf2e703bf7038993eeba6afd2e4db7c3d767b3f95"
+    },
+    {
+      "dialogue_id": "challenge-73565b46cdcad83a",
+      "text_sha256": "73565b46cdcad83a2de4d0ac268e971ab98336ca268782a0397959da27301a70"
+    },
+    {
+      "dialogue_id": "challenge-7607b929a462ce49",
+      "text_sha256": "7607b929a462ce499e9a8633e630fa7a3135180c7c5aa982a04d62edbadcecd0"
+    }
+  ]
+}
