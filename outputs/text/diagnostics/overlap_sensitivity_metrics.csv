@@ -1,0 +1,4 @@
+scenario,train_n,train_benign,train_scam,removed_train_n,threshold,changed_predictions_vs_primary,mean_absolute_score_change,n,scam_support,precision,recall,f1,accuracy,false_positive_rate,balanced_accuracy,roc_auc
+primary_reference,1086,543,543,0,0.5,0,0.0,192,96,1.0,1.0,1.0,1.0,0.0,1.0,1.0
+reviewed_near_duplicates_removed,1082,539,543,4,0.5,0,0.0007171412358152407,192,96,1.0,1.0,1.0,1.0,0.0,1.0,1.0
+all_flagged_validation_counterparts_removed,1058,515,543,28,0.5,0,0.005317488166486282,192,96,1.0,1.0,1.0,1.0,0.0,1.0,1.0

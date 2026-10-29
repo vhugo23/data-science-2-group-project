@@ -1,0 +1,9 @@
+type,n,scam_support,precision,recall,f1,accuracy,false_positive_rate
+delivery,24,0,,,,1.0,0.0
+insurance,23,0,,,,1.0,0.0
+refund,21,21,1.0,1.0,1.0,1.0,
+reward,19,19,1.0,1.0,1.0,1.0,
+ssn,30,30,1.0,1.0,1.0,1.0,
+support,26,26,1.0,1.0,1.0,1.0,
+telemarketing,28,0,,,,1.0,0.0
+wrong,21,0,,,,1.0,0.0

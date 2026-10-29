@@ -1,0 +1,17 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "gpu": "NVIDIA A100-SXM4-40GB, 40960 MiB",
+  "colab_runtime": true,
+  "classifier_compute": "CPU (scikit-learn TF-IDF/logistic regression)",
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.10.7",
+    "joblib": "1.6.0"
+  },
+  "torch_version": "2.11.0+cu130",
+  "transformers_version": "4.57.1"
+}

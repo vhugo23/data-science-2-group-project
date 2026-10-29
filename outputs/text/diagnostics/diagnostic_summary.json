@@ -1,0 +1,178 @@
+{
+  "protocol": "Fixed primary unigram/C/threshold settings; no retuning; same 192 validation dialogues; official test not read or scored.",
+  "implementation_checks": {
+    "train_validation_ids_disjoint": true,
+    "normalized_exact_text_disjoint": true,
+    "dialogue_only_fit_inputs_verified": true,
+    "target_alignment_verified": true,
+    "grid_pipeline_fits_verified": 6,
+    "oof_pipeline_fits_verified": 5,
+    "oof_heldout_preprocessing_isolation_verified": true,
+    "training_only_vocabulary_and_idf_verified": true,
+    "vocabulary_size": 2290,
+    "primary_validation_and_oof_scores_reproduced": true,
+    "test_text_loaded_by_diagnostics": false,
+    "test_scored": false,
+    "limits": "Reproducing the implementation does not resolve shared templates or topic-label confounding."
+  },
+  "label_shuffle": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "summary": {
+      "accuracy": {
+        "mean": 0.52109375,
+        "std": 0.17206574178115844,
+        "min": 0.22916666666666666,
+        "max": 0.7552083333333334
+      },
+      "balanced_accuracy": {
+        "mean": 0.52109375,
+        "std": 0.17206574178115844,
+        "min": 0.22916666666666669,
+        "max": 0.7552083333333333
+      },
+      "roc_auc": {
+        "mean": 0.5219346788194444,
+        "std": 0.22118900785854181,
+        "min": 0.1416015625,
+        "max": 0.8036024305555556
+      },
+      "precision": {
+        "mean": 0.5213892810582333,
+        "std": 0.17326208011372876,
+        "min": 0.24509803921568626,
+        "max": 0.7578947368421053
+      },
+      "recall": {
+        "mean": 0.5151041666666666,
+        "std": 0.17756561647526178,
+        "min": 0.2604166666666667,
+        "max": 0.7604166666666666
+      },
+      "f1": {
+        "mean": 0.5172284886831223,
+        "std": 0.17396033057444643,
+        "min": 0.25252525252525254,
+        "max": 0.7539267015706806
+      }
+    },
+    "interpretation": "A negative control for implementation leakage; F1 has no universal chance value. Topic-correlated validation dialogues can produce substantial between-permutation variation."
+  },
+  "overlap_sensitivity": [
+    {
+      "scenario": "primary_reference",
+      "train_n": 1086,
+      "train_benign": 543,
+      "train_scam": 543,
+      "removed_train_n": 0,
+      "threshold": 0.5,
+      "changed_predictions_vs_primary": 0,
+      "mean_absolute_score_change": 0.0,
+      "n": 192,
+      "scam_support": 96,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": [
+        [
+          96,
+          0
+        ],
+        [
+          0,
+          96
+        ]
+      ],
+      "balanced_accuracy": 1.0,
+      "roc_auc": 1.0
+    },
+    {
+      "scenario": "reviewed_near_duplicates_removed",
+      "train_n": 1082,
+      "train_benign": 539,
+      "train_scam": 543,
+      "removed_train_n": 4,
+      "threshold": 0.5,
+      "changed_predictions_vs_primary": 0,
+      "mean_absolute_score_change": 0.0007171412358152407,
+      "n": 192,
+      "scam_support": 96,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": [
+        [
+          96,
+          0
+        ],
+        [
+          0,
+          96
+        ]
+      ],
+      "balanced_accuracy": 1.0,
+      "roc_auc": 1.0
+    },
+    {
+      "scenario": "all_flagged_validation_counterparts_removed",
+      "train_n": 1058,
+      "train_benign": 515,
+      "train_scam": 543,
+      "removed_train_n": 28,
+      "threshold": 0.5,
+      "changed_predictions_vs_primary": 0,
+      "mean_absolute_score_change": 0.005317488166486282,
+      "n": 192,
+      "scam_support": 96,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": [
+        [
+          96,
+          0
+        ],
+        [
+          0,
+          96
+        ]
+      ],
+      "balanced_accuracy": 1.0,
+      "roc_auc": 1.0
+    }
+  ],
+  "review_scope": {
+    "train_validation_flagged_pairs": 30,
+    "confirmed_near_verbatim_pairs": 4,
+    "validation_membership_unchanged": true,
+    "original_reference_artifacts_unchanged": true
+  },
+  "test_evaluated": false,
+  "limits": "Even perfect sensitivity performance does not establish same-topic intent discrimination or real-world generalization. No independently reviewed challenge set has been evaluated."
+}

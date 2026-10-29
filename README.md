@@ -48,7 +48,7 @@ Keep shared setup changes in Justin's branch and coordinate any changes that cro
 - Use `train`, `validation`, and `test` as the shared split names. Map ASVspoof 2019 LA's official train/dev/evaluation splits without changing their membership. Preserve the scam-dialogue 1,280/320 train/test split; draw validation data only from its training split.
 - Pairing tables identify both source IDs and their split. Split source pools before pairing; no audio clip or dialogue may appear in multiple splits.
 - Train the learned fusion model on out-of-fold component scores. Keep external datasets for evaluation only; do not tune models or thresholds on them.
-- Keep downloaded data and generated artifacts out of Git. Record preprocessing, seeds, metrics, model settings, and limitations with the experiment results.
+- Keep raw datasets, download caches, and temporary artifacts out of Git. Retained text checkpoints and score exports are shared in [`outputs/text/`](outputs/text/README.md) so teammates can reuse them without training. Other tracks' outputs remain ignored. Record preprocessing, seeds, metrics, model settings, and limitations with experiment results.
 
 ## Datasets and experiment sequence
 

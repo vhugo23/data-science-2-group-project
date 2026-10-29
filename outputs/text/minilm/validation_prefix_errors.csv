@@ -1,0 +1,13 @@
+dialogue_id,split,label,model,scam_score,fold,turn_fraction
+scam-train-0000-ffd548fb813511af,validation,1,minilm_logreg,0.3540037901778957,-1,0.25
+scam-train-0040-cb34f772116cdc14,validation,1,minilm_logreg,0.4631348285800074,-1,0.25
+scam-train-0153-9b500369016e3425,validation,1,minilm_logreg,0.3447374843256662,-1,0.25
+scam-train-0200-3b9dba13c1f8e825,validation,1,minilm_logreg,0.4200379673967233,-1,0.25
+scam-train-0206-563d70b6dce6a5f0,validation,1,minilm_logreg,0.1733836579490885,-1,0.25
+scam-train-0216-3a81f41b02f436a3,validation,1,minilm_logreg,0.4695226484802731,-1,0.25
+scam-train-0223-764e797610a67814,validation,1,minilm_logreg,0.4704135327185135,-1,0.25
+scam-train-0235-63144fc2bcda047f,validation,1,minilm_logreg,0.2431332168567622,-1,0.25
+scam-train-0255-ff2b343ea58d8eaf,validation,1,minilm_logreg,0.4196743810516236,-1,0.25
+scam-train-0539-e28e01b913863330,validation,1,minilm_logreg,0.2344505520462838,-1,0.25
+scam-train-0552-7edbf9184ef64573,validation,1,minilm_logreg,0.3314732089179173,-1,0.25
+scam-train-0315-7bcb1e4969958244,validation,1,minilm_logreg,0.4883514074633615,-1,0.5
