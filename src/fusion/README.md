@@ -20,7 +20,7 @@ Pair records must retain both the audio clip ID and dialogue ID. Partition sourc
 
 - Labels: audio 1 = spoof, text 1 = scam. Fusion target = spoof AND scam.
 - Pairs are built inside each split from that split's clips and dialogues only. A split missing from either pool is skipped with a warning (for example, text test scores are not available yet).
-- Each clip is used at most once. Each dialogue is paired equally often with genuine and spoof clips, so it is used at most `2 * (max_reuse // 2)` times; the default `max_reuse=3` therefore means at most twice (once genuine, once spoof). `max_reuse` below 2 is rejected.
+- Each clip is used at most once. Each dialogue is paired equally often with genuine and spoof clips, so `uses_per_dialogue` (the most times one dialogue appears) must be even. The default 2 means once with a genuine clip and once with a spoof clip; 4 is allowed for sensitivity checks. Odd values and values below 2 are rejected.
 - The four cells (genuine/spoof x benign/scam) have equal size in every split. By default the pair count is the most the scarcest ingredient allows; `n_per_cell` can request fewer, and a request that is too large raises an error.
-- Manifest columns: `pair_id, split, audio_id, text_id, audio_label, text_label, target, cell, dummy`. `dummy` is true when built from fake or smoke scores (inferred from `dummy_` ids; pass `dummy=True` for smoke-run scores).
+- Manifest columns: `pair_id, split, audio_id, text_id, audio_label, text_label, target, cell, dummy`. `dummy` is a required argument to `build_pairs`: pass `True` for fake or smoke-run scores and `False` otherwise. It is copied into every row.
 - Resample dialogues (and clips if ever reused), not pairs, when computing confidence intervals.

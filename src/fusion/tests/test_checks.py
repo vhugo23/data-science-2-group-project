@@ -11,7 +11,7 @@ from src.fusion.pairing import build_pairs
 class CheckPairsTests(unittest.TestCase):
     def setUp(self):
         self.audio, self.text = make_dummy_pools(seed=1)
-        self.pairs = build_pairs(self.audio, self.text, seed=7)
+        self.pairs = build_pairs(self.audio, self.text, seed=7, dummy=True)
 
     def assert_fails(self, pairs, pattern, audio=None, text=None, **kwargs):
         with self.assertRaisesRegex(LeakageError, pattern):
@@ -67,7 +67,7 @@ class CheckPairsTests(unittest.TestCase):
         victim = part.iloc[0]["text_id"]
         for index in part.index[1:6]:
             bad.loc[index, "text_id"] = victim
-        self.assert_fails(bad, "reuse cap")
+        self.assert_fails(bad, "more than 2 times")
 
     def test_dialogue_unequal_genuine_and_spoof(self):
         bad = self.pairs.copy()
@@ -75,7 +75,7 @@ class CheckPairsTests(unittest.TestCase):
         victim = part.iloc[0]["text_id"]
         # Move another spoof pair onto the same dialogue so it has 2 spoof, 1 genuine.
         bad.loc[part.index[5], "text_id"] = victim
-        self.assert_fails(bad, "equally", max_reuse=4)
+        self.assert_fails(bad, "equally", uses_per_dialogue=4)
 
     def test_wrong_target(self):
         bad = self.pairs.copy()

@@ -44,7 +44,7 @@ def pool_problems(pool, name):
     return problems
 
 
-def check_pairs(pairs, audio_pool, text_pool, max_reuse=3):
+def check_pairs(pairs, audio_pool, text_pool, uses_per_dialogue=2):
     """Raise LeakageError listing every violated rule; return None when all hold."""
     missing = [column for column in PAIR_COLUMNS if column not in pairs.columns]
     if missing:
@@ -84,8 +84,8 @@ def check_pairs(pairs, audio_pool, text_pool, max_reuse=3):
         problems.append(f"audio clips used more than once: {_few(reused.unique())}")
 
     uses = pairs.groupby("text_id").size()
-    if (uses > max_reuse).any():
-        problems.append(f"dialogues over the reuse cap of {max_reuse}: {_few(uses[uses > max_reuse].index)}")
+    if (uses > uses_per_dialogue).any():
+        problems.append(f"dialogues used more than {uses_per_dialogue} times: {_few(uses[uses > uses_per_dialogue].index)}")
     by_type = pairs.groupby(["text_id", "audio_label"]).size().unstack(fill_value=0).reindex(columns=[0, 1], fill_value=0)
     unequal = by_type[by_type[0] != by_type[1]]
     if len(unequal):

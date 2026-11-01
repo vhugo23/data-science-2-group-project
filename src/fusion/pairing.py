@@ -3,7 +3,7 @@
 Rules (see src/fusion/README.md): pools are split before pairing, so a pair only
 joins a clip and a dialogue from the same split; each clip is used once; each
 dialogue is used equally often with genuine and spoof clips, at most
-``max_reuse`` times in total. Labels: audio 1 = spoof, text 1 = scam, and
+``uses_per_dialogue`` times in total. Labels: audio 1 = spoof, text 1 = scam, and
 target = spoof AND scam.
 """
 import warnings
@@ -56,18 +56,18 @@ def _split_pairs(split, audio, text, per_type, n_per_cell, rng):
     return rows
 
 
-def build_pairs(audio_pool, text_pool, max_reuse=3, n_per_cell=None, seed=0, dummy=None):
+def build_pairs(audio_pool, text_pool, *, dummy, uses_per_dialogue=2, n_per_cell=None, seed=0):
     """Return the pair manifest.
 
-    max_reuse caps how often one dialogue appears. Because genuine and spoof uses
-    must be equal, a dialogue is used 2 * (max_reuse // 2) times at most.
+    uses_per_dialogue is the most times one dialogue appears. It must be even, because
+    half the uses pair the dialogue with genuine clips and half with spoof clips:
+    2 (default) is one of each; 4 is for sensitivity checks.
     n_per_cell defaults to the most pairs the scarcest ingredient allows.
-    dummy marks the manifest as built from fake or smoke scores; when None it is
-    inferred from ``dummy_`` id prefixes. Pass dummy=True for smoke-run scores.
+    dummy is required: True when the scores are fake or from a smoke run, else False.
     """
-    per_type = max_reuse // 2
-    if per_type < 1:
-        raise ValueError("max_reuse must be at least 2: each dialogue needs one genuine and one spoof use")
+    if uses_per_dialogue < 2 or uses_per_dialogue % 2:
+        raise ValueError(f"uses_per_dialogue must be an even number of at least 2, got {uses_per_dialogue}")
+    per_type = uses_per_dialogue // 2
     problems = pool_problems(audio_pool, "audio") + pool_problems(text_pool, "text")
     if problems:
         raise LeakageError(problems)
@@ -86,9 +86,7 @@ def build_pairs(audio_pool, text_pool, max_reuse=3, n_per_cell=None, seed=0, dum
     for split in splits:
         rows += _split_pairs(split, audio_pool, text_pool, per_type, n_per_cell, rng)
     pairs = pd.DataFrame(rows, columns=PAIR_COLUMNS[:-1])
-    if dummy is None:
-        dummy = bool(pairs["audio_id"].str.startswith("dummy_").all() and pairs["text_id"].str.startswith("dummy_").all())
-    pairs["dummy"] = dummy
+    pairs["dummy"] = bool(dummy)
     return pairs
 
 
