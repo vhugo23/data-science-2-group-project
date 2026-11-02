@@ -38,9 +38,9 @@ Each person works on their own branch and changes files in their assigned area. 
 
 | Owner | Owns | Work |
 | --- | --- | --- |
-| Hugo Santos | `src/audio/`, `notebooks/audio/` | Audio preprocessing and embeddings, spoof model, audio benchmarks |
-| Justin Kondratenko | `src/text/`, `notebooks/text/`, shared setup files | Text preprocessing, NLP baselines and model, cross-dataset text evaluation |
-| Joshua Eworo | `src/fusion/`, `notebooks/fusion/`, `src/metrics.py` | Pair construction and leakage checks, fusion, robustness, shared evaluation and failure analysis |
+| Justin Kondratenko | `src/audio/`, `notebooks/audio/`, shared setup files | Audio preprocessing and embeddings, MFCC and wav2vec 2.0 spoof baselines, audio benchmarks, shared environment |
+| Joshua Eworo | `src/text/`, `notebooks/text/`, `outputs/text/` | Text audit and splits, TF-IDF and frozen MiniLM baselines, diagnostics, challenge set, shared text score exports |
+| Hugo Santos | `src/fusion/`, `notebooks/fusion/`, `src/metrics.py` | Pair construction and leakage checks, fusion models, robustness, shared evaluation and failure analysis |
 
 Keep shared setup changes in Justin's branch and coordinate any changes that cross track folders before editing. `src/datasets.py` is the shared `.env` path helper.
 
