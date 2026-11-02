@@ -34,8 +34,9 @@ uv pip install --python "$HOME/.venvs/scam-text-baseline/Scripts/python.exe" -r 
 & "$HOME/.venvs/scam-text-baseline/Scripts/python.exe" -m src.text.baseline
 ```
 
-This records a local runtime. The notebook defaults to requiring a Colab A100;
-a local notebook smoke run requires `SCAM_REQUIRE_COLAB_A100=0`. The shared
+This records a local runtime. The notebooks run locally or on any Colab runtime;
+set `SCAM_REQUIRE_COLAB_A100=1` for a provenance run that must have a Colab A100
+(`finalize_colab_notebook.py` still rejects non-A100 results). The shared
 `pyproject.toml` and `uv.lock` are unchanged. This isolated environment uses
 `requirements-baseline.txt`; do not mix it with another project's environment.
 

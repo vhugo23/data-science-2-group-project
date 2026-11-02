@@ -20,8 +20,8 @@ First text-track milestone. Input: **dialogue only**. Target: `label` (1 scam, 0
 `type` is retained for audit/evaluation and never enters the classifier.
 
 Run in VS Code with a Colab A100 kernel, or in Google Colab. This notebook is
-self-contained; there is no need to clone/upload source modules. Runtime checks
-fail unless a Colab A100 is actually present. Scikit-learn itself fits on CPU;
+self-contained; there is no need to clone/upload source modules. It also runs
+locally; set `SCAM_REQUIRE_COLAB_A100=1` to require a Colab A100. Scikit-learn fits on CPU;
 the A100 is reserved for the upcoming frozen MiniLM experiment.
 
 The original 1,280/320 split is preserved, with 192 validation rows selected only
@@ -42,9 +42,9 @@ from pathlib import Path
 import subprocess
 import sys
 
-# Keep the default for the requested remote run. Set the environment variable to 0
-# only for an explicitly labelled local smoke run.
-REQUIRE_COLAB_A100 = os.environ.get("SCAM_REQUIRE_COLAB_A100", "1") == "1"
+# Runs locally (CPU/GPU) or on any Colab runtime. Set SCAM_REQUIRE_COLAB_A100=1
+# for a provenance run that must fail without a Colab A100.
+REQUIRE_COLAB_A100 = os.environ.get("SCAM_REQUIRE_COLAB_A100", "0") == "1"
 try:
     gpu = subprocess.check_output(
         ["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader"], text=True
