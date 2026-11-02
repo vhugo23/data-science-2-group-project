@@ -1,10 +1,12 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
-
-
-load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+try:
+    from dotenv import load_dotenv
+except ImportError:  # e.g. bare Colab runtime: set paths with os.environ instead.
+    pass
+else:
+    load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 DATA_DIRS = {
     "asvspoof19_la": os.getenv("ASVSPOOF19_LA_DIR"),

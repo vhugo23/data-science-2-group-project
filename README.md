@@ -28,7 +28,9 @@ Set `UV_PROJECT_ENVIRONMENT` and `HF_HOME` again in each new terminal session. T
 
 Copy `.env.example` to `.env` in the repository root and set paths to datasets available on that machine. `.env` and dataset contents are ignored by Git. Do not commit local paths, dataset files, credentials, or model caches.
 
-Start Jupyter from the repository root with `uv run jupyter lab`, then open `notebooks/project_setup.ipynb` to check the local dataset paths.
+Start Jupyter from the repository root with `uv run jupyter lab`, then open `notebooks/project_setup.ipynb` to check the local dataset paths and the device (CUDA GPU or CPU).
+
+Notebooks also run on Google Colab, including a VS Code Colab kernel. Clone the repo in the runtime and `%cd` into it, then set dataset paths with `os.environ` (for example, a mounted Drive folder) instead of `.env`. Audio embeddings use CUDA when it is available and the CPU otherwise. The frozen MiniLM text run needs a CUDA GPU, either local or on Colab.
 
 ## Team ownership
 
