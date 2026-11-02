@@ -1,7 +1,14 @@
 .env
 .venv/
 data/
-# outputs/
+# Generated outputs are tracked per track; regenerable text transfer and scratch files stay local.
+/outputs/text/*.zip
+/outputs/text/*_raw.ipynb
+/outputs/text/diagnostics-local/
+/outputs/text/**/implementation_replay/
+/outputs/text/minilm/checkpoint_verification_cache/
+/outputs/text/diagnostics/*.joblib
+/outputs/text/baseline/similarity_review_text.json
 __pycache__/
 .ipynb_checkpoints/
 

@@ -1,0 +1,12 @@
+{
+  "dataset": "BothBosu/scam-dialogue",
+  "revision": "321b961b5ae353e19ed479b960658dcd223d5e06",
+  "file_sha256": {
+    "scam-dialogue_train.csv": "cda5d42d15fd341208a25466d9ea279de905a640bd153f67b5c29743520f96f8",
+    "scam-dialogue_test.csv": "17a9e52e90d893541d76dbb4588cb75b1a66ef2474ef2619d56feff5b8d5aec0"
+  },
+  "seed": 42,
+  "validation_size": 192,
+  "stratification": "label",
+  "id_rule": "scam-{published_split}-{zero_based_row:04d}-{raw_text_sha256[:16]}"
+}
