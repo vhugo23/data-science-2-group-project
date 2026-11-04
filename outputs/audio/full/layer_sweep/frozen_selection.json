@@ -1,0 +1,22 @@
+{
+  "sample_rate": 16000,
+  "window_seconds": 4,
+  "trim_top_db": 30,
+  "crop": "start",
+  "padding": "right_zero",
+  "normalization": "peak",
+  "n_mfcc": 20,
+  "n_fft": 400,
+  "hop_length": 160,
+  "n_mels": 40,
+  "encoder": "facebook/wav2vec2-base",
+  "encoder_revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+  "pooling": "mean_std",
+  "layer": 5,
+  "C": 0.01,
+  "roc_auc": 0.9977446306832745,
+  "eer": 0.020805767864817554,
+  "f1": 0.9928505793496044,
+  "threshold": 0.3371636953561974,
+  "n": 24844
+}
