@@ -1,0 +1,16 @@
+{
+  "saved_encoder_and_tokenizer_round_trip_verified": true,
+  "chunk_counts_tested": [
+    1,
+    2,
+    3
+  ],
+  "dialogue_ids": [
+    "scam-train-0012-dfc10f8ee73ce0d4",
+    "scam-train-0000-ffd548fb813511af",
+    "scam-train-0004-d0da0e7c4a7d032b"
+  ],
+  "max_absolute_embedding_difference": 1.4901161193847656e-07,
+  "challenge_or_test_inputs_used": false,
+  "encoder_fingerprint_matches_freeze": true
+}

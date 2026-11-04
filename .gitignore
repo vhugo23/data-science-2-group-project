@@ -1,7 +1,17 @@
 .env
 .venv/
 data/
-outputs/
+# Share the text branch's retained outputs; keep other tracks local.
+/outputs/*
+!/outputs/text/
+# Regenerable transfer files and diagnostic scratch outputs stay local.
+/outputs/text/*.zip
+/outputs/text/*_raw.ipynb
+/outputs/text/diagnostics-local/
+/outputs/text/**/implementation_replay/
+/outputs/text/minilm/checkpoint_verification_cache/
+/outputs/text/diagnostics/*.joblib
+/outputs/text/baseline/similarity_review_text.json
 __pycache__/
 .ipynb_checkpoints/
 

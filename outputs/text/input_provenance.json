@@ -1,0 +1,24 @@
+{
+  "diagnostic_inputs.zip": {
+    "archive_sha256": "f57cd60344113d2429ef9b776a426921fa37b38f527703a00759e1b7ca335cc4",
+    "entries_sha256": {
+      "reference/tfidf_logreg.joblib": "8099a48debb8ea4859910671f46b0913c9bdbe116712b714606a202a70fae32a",
+      "reference/frozen_config.json": "9b7deac53f8dcaa8b670b002803056f238de98b2e1d33fdf8a1a205df80131b5",
+      "reference/split_manifest.csv": "1fe25e23bff220b8c26efc211e5f2cc40b18b4d42135af4a80555a49a96e7559",
+      "reference/oof_folds.csv": "534d5ddc3d2f42b7ab1b6809a55280a2bcdd648418d8cfa303b68c1a6b5ec70b",
+      "reference/fusion_scores_train_validation.csv": "6042dc89c7a0ec35de2ecdc70dfdbf01e7d8c3b91c526b7b406309973c2da1d0",
+      "fixed_manifest.csv": "1fe25e23bff220b8c26efc211e5f2cc40b18b4d42135af4a80555a49a96e7559",
+      "review.csv": "00672a488c2af7e802787a90ff1b335f287615759517e2c75a2ff6b6eb426a13"
+    }
+  },
+  "minilm_inputs.zip": {
+    "archive_sha256": "9c3f454e699bbdbdbe9fbecafdf33e89418f5686631bf5b31ba2bcb9a6821d92",
+    "entries_sha256": {
+      "reference/tfidf_logreg.joblib": "8099a48debb8ea4859910671f46b0913c9bdbe116712b714606a202a70fae32a",
+      "reference/frozen_config.json": "9b7deac53f8dcaa8b670b002803056f238de98b2e1d33fdf8a1a205df80131b5",
+      "reference/oof_folds.csv": "534d5ddc3d2f42b7ab1b6809a55280a2bcdd648418d8cfa303b68c1a6b5ec70b",
+      "reference/fusion_scores_train_validation.csv": "6042dc89c7a0ec35de2ecdc70dfdbf01e7d8c3b91c526b7b406309973c2da1d0",
+      "fixed_manifest.csv": "1fe25e23bff220b8c26efc211e5f2cc40b18b4d42135af4a80555a49a96e7559"
+    }
+  }
+}

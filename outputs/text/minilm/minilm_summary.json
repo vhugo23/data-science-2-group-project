@@ -1,0 +1,108 @@
+{
+  "config": {
+    "model": "minilm_logreg",
+    "C": 1.0,
+    "threshold": 0.5,
+    "threshold_rule": "score >= threshold",
+    "fit_n": 1086,
+    "seed": 42,
+    "embedding_recipe": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "max_sequence_tokens": 256,
+      "chunking": "nonoverlapping slices of original content token IDs; reserve tokenizer special tokens",
+      "chunk_pooling": "attention-mask mean of final hidden states, then L2 normalization",
+      "dialogue_pooling": "equal mean of chunk vectors, then L2 normalization",
+      "dtype": "float32",
+      "recipe_version": 1
+    },
+    "encoder_frozen": true,
+    "selection": "Original validation F1 at 0.5; ties smallest C; then threshold maximizes validation F1 with ties closest to 0.5",
+    "validation_at_0_5": {
+      "n": 192,
+      "scam_support": 96,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": [
+        [
+          96,
+          0
+        ],
+        [
+          0,
+          96
+        ]
+      ]
+    },
+    "validation": {
+      "n": 192,
+      "scam_support": 96,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": [
+        [
+          96,
+          0
+        ],
+        [
+          0,
+          96
+        ]
+      ]
+    },
+    "challenge_scored": false,
+    "test_evaluated": false,
+    "saved_classifier_sha256": "6c199dcae7732d7a8692b6a3c0381fa032d668bb69a71c64556404d4ae90d528"
+  },
+  "encoder_frozen": true,
+  "trainable_encoder_parameters": 0,
+  "encoder_fingerprint_before_and_after": "45a3f1a3de9850015587100bbeb583128c8f61e91987e5fad4252142bbb1fd47",
+  "embedding_cache_reuse_verified": true,
+  "embedding_cache": {
+    "cache_key": "c2df44060800e6b0538c4b82d79ef6f4c712d30eb01513367cb72f9a761b5005",
+    "npz_sha256": "2a609ad50a3790ca75961176ecac8be9b0a2c008875d922ca2da26e8544f7730",
+    "recipe": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "max_sequence_tokens": 256,
+      "chunking": "nonoverlapping slices of original content token IDs; reserve tokenizer special tokens",
+      "chunk_pooling": "attention-mask mean of final hidden states, then L2 normalization",
+      "dialogue_pooling": "equal mean of chunk vectors, then L2 normalization",
+      "dtype": "float32",
+      "recipe_version": 1
+    },
+    "dialogues": 1278,
+    "chunks": 2330,
+    "content_budget": 254,
+    "cache_hit": false,
+    "labels_used": false,
+    "versions": {
+      "torch": "2.11.0+cu130",
+      "transformers": "4.57.1",
+      "tokenizers": "0.22.1",
+      "safetensors": "0.6.2"
+    }
+  },
+  "included_development_dialogues": 1278,
+  "longer_than_256_with_special_tokens": 963,
+  "wordpiece_summary": {
+    "count": 1278.0,
+    "mean": 334.0829420970266,
+    "std": 117.40447793597451,
+    "min": 80.0,
+    "25%": 256.25,
+    "50%": 339.0,
+    "75%": 422.75,
+    "max": 563.0
+  },
+  "length_scope": "Included original training/validation only; test wordpiece lengths deferred until final evaluation",
+  "fusion_score_rows": 1278,
+  "challenge_scored": false,
+  "test_evaluated": false
+}

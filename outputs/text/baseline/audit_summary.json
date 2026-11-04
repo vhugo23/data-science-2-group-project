@@ -1,0 +1,54 @@
+{
+  "raw_rows": 1600,
+  "missing_text": 0,
+  "planned_counts": {
+    "train": 1088,
+    "test": 320,
+    "validation": 192
+  },
+  "included_counts": {
+    "train": 1086,
+    "test": 320,
+    "validation": 192
+  },
+  "excluded_count": 2,
+  "raw_exact_duplicate_groups": 2,
+  "normalized_duplicate_groups": 2,
+  "cross_split_candidates": 56,
+  "candidate_threshold": 0.9,
+  "audit_similarity": "cosine of stateless 2^18-bin character 5-gram hashes; collisions possible",
+  "length_summary": {
+    "characters": {
+      "count": 1600.0,
+      "mean": 1402.66375,
+      "std": 517.1546396018566,
+      "min": 304.0,
+      "25%": 1076.75,
+      "50%": 1443.5,
+      "75%": 1803.25,
+      "max": 2382.0
+    },
+    "words": {
+      "count": 1600.0,
+      "mean": 243.51875,
+      "std": 89.46898253143091,
+      "min": 55.0,
+      "25%": 188.0,
+      "50%": 250.0,
+      "75%": 312.25,
+      "max": 413.0
+    },
+    "turns": {
+      "count": 1600.0,
+      "mean": 13.685625,
+      "std": 4.351278763326146,
+      "min": 6.0,
+      "25%": 10.0,
+      "50%": 13.0,
+      "75%": 17.0,
+      "max": 28.0
+    }
+  },
+  "exclusion_policy": "Missing text and normalized exact duplicates only; test always retained. No similarity-only exclusions.",
+  "wordpiece_lengths": "Deferred to the MiniLM milestone; word counts are not wordpiece counts."
+}

@@ -17,6 +17,11 @@ for the beginning of the pipeline. The detailed run commands live in
 | Saved MiniLM model, embeddings, and scores | `outputs/text/minilm/` |
 | Completed diagnostic evidence | `outputs/text/diagnostics/` |
 
+The retained [`outputs/text/`](../../outputs/text/README.md) files are now shared
+through GitHub, including the trained classifiers, encoder/tokenizer, and score
+CSVs. Pull the branch to reuse them without classifier training. Other tracks'
+outputs and temporary text artifacts remain ignored.
+
 ## Source files
 
 - `baseline.py`: dataset audit and TF-IDF training.

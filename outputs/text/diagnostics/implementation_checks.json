@@ -1,0 +1,15 @@
+{
+  "train_validation_ids_disjoint": true,
+  "normalized_exact_text_disjoint": true,
+  "dialogue_only_fit_inputs_verified": true,
+  "target_alignment_verified": true,
+  "grid_pipeline_fits_verified": 6,
+  "oof_pipeline_fits_verified": 5,
+  "oof_heldout_preprocessing_isolation_verified": true,
+  "training_only_vocabulary_and_idf_verified": true,
+  "vocabulary_size": 2290,
+  "primary_validation_and_oof_scores_reproduced": true,
+  "test_text_loaded_by_diagnostics": false,
+  "test_scored": false,
+  "limits": "Reproducing the implementation does not resolve shared templates or topic-label confounding."
+}

@@ -1,0 +1,61 @@
+{
+  "model": "minilm_logreg",
+  "C": 1.0,
+  "threshold": 0.5,
+  "threshold_rule": "score >= threshold",
+  "fit_n": 1086,
+  "seed": 42,
+  "embedding_recipe": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "max_sequence_tokens": 256,
+    "chunking": "nonoverlapping slices of original content token IDs; reserve tokenizer special tokens",
+    "chunk_pooling": "attention-mask mean of final hidden states, then L2 normalization",
+    "dialogue_pooling": "equal mean of chunk vectors, then L2 normalization",
+    "dtype": "float32",
+    "recipe_version": 1
+  },
+  "encoder_frozen": true,
+  "selection": "Original validation F1 at 0.5; ties smallest C; then threshold maximizes validation F1 with ties closest to 0.5",
+  "validation_at_0_5": {
+    "n": 192,
+    "scam_support": 96,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        96,
+        0
+      ],
+      [
+        0,
+        96
+      ]
+    ]
+  },
+  "validation": {
+    "n": 192,
+    "scam_support": 96,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        96,
+        0
+      ],
+      [
+        0,
+        96
+      ]
+    ]
+  },
+  "challenge_scored": false,
+  "test_evaluated": false,
+  "saved_classifier_sha256": "6c199dcae7732d7a8692b6a3c0381fa032d668bb69a71c64556404d4ae90d528"
+}

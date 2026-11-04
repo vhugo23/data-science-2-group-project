@@ -46,7 +46,9 @@ Cross-split cosine search on stateless hashed character 5-grams found 56 pairs
 at similarity ≥0.90, including the two exact pairs. After exact exclusions, 53
 flagged pairs have both members included. We inspected word-level differences
 for all 56 pairs. [The review table](audit/similarity_review.csv) records decisions;
-full matching texts are saved locally in `similarity_review_text.json`.
+matching dialogue texts can be reconstructed from the pinned dataset using the
+review table's IDs. The copied full-text review export is excluded from shared
+outputs; the pair decisions and similarity evidence are retained.
 
 Examples show why similarity needs interpretation:
 
@@ -118,8 +120,9 @@ and ID contract. Hugo should pair only included IDs within their fixed split.
 Verified 14 executed Colab notebook cells with no errors, original test membership,
 fixed manifest identity, exact-duplicate separation, OOF coverage and fold labels,
 score/target alignment, saved-model checksum, and reproduction of Colab validation
-scores after reloading the model locally. Raw data, models, figures, and score
-exports remain in ignored artifact folders.
+scores after reloading the model locally. Raw data remains ignored. Retained
+models, figures, score exports, and audit evidence are now shared under
+`outputs/text/` for teammate reuse.
 
 The [MiniLM milestone and frozen validation-prefix comparison](MINILM_RESULTS.md)
 are now complete. Final challenge and official-test comparisons await independent
