@@ -19,14 +19,16 @@ def load_encoder(device):
     return processor, encoder
 
 
-def cache_path(output_dir, name):
+def cache_path(output_dir, name, all_layers=False, trim=True):
     """Cache file whose name records the encoder and preprocessing settings."""
     stem = (f"{SETTINGS['encoder'].split('/')[-1]}_{SETTINGS['sample_rate'] // 1000}k_"
-            f"{SETTINGS['window_seconds']}s_trim{SETTINGS['trim_top_db']}")
-    return Path(output_dir) / f"{stem}_{name}.npz"
+            f"{SETTINGS['window_seconds']}s_" + (f"trim{SETTINGS['trim_top_db']}" if trim else "untrimmed"))
+    suffix = "_all_layers_mean_std" if all_layers else ""
+    return Path(output_dir) / f"{stem}{suffix}_{name}.npz"
 
 
-def encoder_features(frame, processor, encoder, device, cache=None, condition="clean", seed=None):
+def encoder_features(frame, processor, encoder, device, cache=None, condition="clean", seed=None, all_layers=False,
+                     trim=True):
     """Time-mean pooled last hidden states, one clip at a time to limit GPU memory.
 
     frame needs sample_id and path columns. A cache is reused only when its ids
@@ -40,12 +42,17 @@ def encoder_features(frame, processor, encoder, device, cache=None, condition="c
     rng = np.random.default_rng(seed)
     values = []
     for path in frame["path"]:
-        audio = degrade_audio(process_audio(path), condition, rng)
+        audio = degrade_audio(process_audio(path, trim=trim), condition, rng)
         inputs = processor(audio, sampling_rate=SETTINGS["sample_rate"], return_tensors="pt")
         inputs = {key: value.to(device) for key, value in inputs.items()}
         with torch.inference_mode():
-            hidden = encoder(**inputs).last_hidden_state
-        values.append(hidden.mean(dim=1).squeeze(0).cpu().numpy())
+            output = encoder(**inputs, output_hidden_states=all_layers)
+        if all_layers:
+            pooled = torch.stack([torch.cat([hidden.mean(dim=1), hidden.std(dim=1, correction=0)], dim=-1)
+                                  for hidden in output.hidden_states])
+            values.append(pooled.squeeze(1).cpu().numpy().astype(np.float16))
+        else:
+            values.append(output.last_hidden_state.mean(dim=1).squeeze(0).cpu().numpy())
     features = np.stack(values)
     if cache is not None:
         np.savez_compressed(cache, sample_ids=ids, features=features)

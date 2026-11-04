@@ -32,7 +32,10 @@ def prepare_frames(la_dir, output_dir, full=False, final=False):
     if manifest_path.exists():
         saved = pd.read_csv(manifest_path)
         shared = saved["split"].isin(frames)
-        pd.testing.assert_frame_equal(saved.loc[shared].reset_index(drop=True), manifest)
+        current = manifest[manifest["split"].isin(saved["split"])]
+        pd.testing.assert_frame_equal(saved.loc[shared].reset_index(drop=True), current.reset_index(drop=True))
+        if set(manifest["split"]) - set(saved["split"]):
+            manifest.to_csv(manifest_path, index=False)
     else:
         manifest.to_csv(manifest_path, index=False)
     return frames
